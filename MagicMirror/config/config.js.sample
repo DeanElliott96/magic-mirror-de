@@ -46,58 +46,115 @@ var config = {
 			position: "top_bar"
 		},
 		{
+			module: "MMM-CountDown",
+			position: "top_center",
+			config: {
+				event: "Baloo's Birthday!",
+				date: "2021-03-23 00:00:00",
+				daysLabel: "d ",
+				hoursLabel: "h ",
+				minutesLabel: "m "
+			}
+		},
+		{
 			module: "clock",
 			position: "top_left"
 		},
 		{
 			module: "calendar",
-			header: "US Holidays",
+			header: "Scotland Holidays",
 			position: "top_left",
 			config: {
 				calendars: [
 					{
 						symbol: "calendar-check",
-						url: "webcal://www.calendarlabs.com/ical-calendar/ics/76/US_Holidays.ics"					}
+						url: "https://www.officeholidays.com/ics-clean/united-kingdom/scotland"
+					}
+				]
+			}
+		},
+		{
+			module: "calendar",
+			header: "Falkirk Council Holidays",
+			position: "bottom_left",
+			config: {
+				calendars: [
+					{
+						symbol: "calendar-check",
+						url: "http://www.falkirk.gov.uk/school-holidays-ical?su=20210311013732"
+					}
 				]
 			}
 		},
 		{
 			module: "compliments",
-			position: "lower_third"
-		},
-		{
-			module: "currentweather",
-			position: "top_right",
+			position: "bottom_center",
 			config: {
-				location: "New York",
-				locationID: "5128581", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				appid: "YOUR_OPENWEATHER_API_KEY"
+				compliments: {
+					morning: [
+						"Those are the most beautiful, big brown eyes I've ever seen!",
+
+						"Good morning Gorgeous!",
+						"You look so perfect",
+						"You are the gravy to my mashed potatoes",
+						"I hope your day is as beautiful as you!",
+						"You’re my best friend!",
+						"I love every inch of you— even your toes!",
+						"Looking good! ;)",
+						"You look beautiful even when you don’t try!",
+						"WOW, I won the jackpot with you!",
+						"I'm lucky to be your mirror!",
+						"On a scale from 1 to 10, you're an 15!",
+						"Damn. You're looking good!",
+						"Yes, you are the fairest of them all",
+						"Go get 'em, Tiger!",
+						"You look awesome today, seriously",
+						"Yum!, I dig you",
+						"I would volunteer to take your place in the Hunger Games",
+					],
+
+
+				}
 			}
 		},
 		{
-			module: "weatherforecast",
+			module: "MMM-3Day-Forecast",
 			position: "top_right",
-			header: "Weather Forecast",
 			config: {
-				location: "New York",
-				locationID: "5128581", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				appid: "YOUR_OPENWEATHER_API_KEY"
+				api_key: "sh",
+				lat: "sh",
+				lon: "sh",
 			}
 		},
 		{
-			module: "newsfeed",
-			position: "bottom_bar",
+			module: "MMM-GoogleDriveSlideShow",
+			position: "middle_center",
 			config: {
-				feeds: [
-					{
-						title: "New York Times",
-						url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-					}
-				],
-				showSourceTitle: true,
-				showPublishDate: true,
-				broadcastNewsFeeds: true,
-				broadcastNewsUpdates: true
+				rootFolderId: "19VlNdKJKeVgo4m6yg077YArKcYKDtWpb",
+				maxFolders: 0, 
+				maxResults: 350,
+				playMode: "AUTO",
+				nextOnNotification: null,
+				stopOnNotification: null,
+				startOnNotification: null,
+				refreshDriveDelayInSeconds: 24 * 3600,
+				refreshSlideShowIntervalInSeconds: 10,
+				maxWidth: "500",
+				maxHeight: "500",
+				theme: "none",
+				opacity: 1,
+				debug: false
+			}
+		},
+		{
+			module: "MMM-NowPlayingOnSpotify",
+			position: "bottom_right",
+		  
+			config: {
+			  clientID: "sh",
+			  clientSecret: "sh",
+			  accessToken: "sh",
+			  refreshToken: "sh"
 			}
 		},
 	]
