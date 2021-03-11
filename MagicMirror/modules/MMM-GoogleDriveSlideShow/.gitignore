@@ -1,0 +1,5 @@
+node_modules/
+secrets/*.json
+.cache
+package-lock.json
+.docker_initialized
