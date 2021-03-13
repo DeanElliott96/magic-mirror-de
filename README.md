@@ -6,4 +6,4 @@ MMM-3Day-Forecast: https://github.com/nigel-daniels/MMM-3Day-Forecast
 
 MMM-NowPlayingOnSpotify: https://github.com/raywo/MMM-NowPlayingOnSpotify
 
-MMM-GoogleDriveSlideShow: https://github.com/clegallic/MMM-GoogleDriveSlideSho
+MMM-GoogleDriveSlideShow: https://github.com/clegallic/MMM-GoogleDriveSlideShow
